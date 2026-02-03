@@ -39,7 +39,14 @@ if (!fs.existsSync(DATA_DIR)) {
   fs.mkdirSync(DATA_DIR);
 }
 
-// Start Server
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
-});
+// Export app for serverless
+export const handler = app;
+
+// Start Server only if not in serverless mode
+if (process.env.NODE_ENV !== 'production' && !process.env.NETLIFY) {
+  app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+  });
+}
+
+export default app;
