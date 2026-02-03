@@ -29,6 +29,7 @@ const loginLimiter = rateLimit({
 });
 
 // Routes
+app.get('/api/health', (req, res) => res.json({ status: 'ok', timestamp: new Date() }));
 app.use('/api/auth/login', loginLimiter); // Apply limiter specially to login
 app.use('/api/auth', authRoutes);
 app.use('/api/wines', wineRoutes);
