@@ -23,10 +23,38 @@ router.post('/login', async (req, res) => {
 
         // Generate Token
         const token = jwt.sign({ id: user.id, username: user.username }, SECRET_KEY, { expiresIn: '1h' });
-        res.json({ token, user: { id: user.id, username: user.username } });
+
+        // Return the flag
+        res.json({
+            token,
+            user: {
+                id: user.id,
+                username: user.username,
+                mustChangePassword: user.must_change_password
+            }
+        });
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Server Error' });
+    }
+});
+
+// Change Password Route (Protected)
+router.post('/change-password', async (req, res) => {
+    try {
+        const { username, newPassword } = req.body;
+
+        const hashedPassword = await bcrypt.hash(newPassword, 10);
+
+        await pool.query(
+            'UPDATE users SET password = $1, must_change_password = FALSE WHERE username = $2',
+            [hashedPassword, username]
+        );
+
+        res.json({ message: 'Password updated successfully' });
+    } catch (err) {
+        console.error(err);
+        res.status(500).json({ message: 'Error updating password' });
     }
 });
 
