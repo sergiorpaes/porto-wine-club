@@ -9,7 +9,11 @@ const router = express.Router();
 router.get('/', async (req, res) => {
     try {
         const result = await pool.query('SELECT * FROM wines ORDER BY id ASC');
-        res.json(result.rows);
+        const wines = result.rows.map(wine => ({
+            ...wine,
+            price: parseFloat(wine.price)
+        }));
+        res.json(wines);
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Server Error' });
@@ -28,7 +32,8 @@ router.post('/', authenticateToken, async (req, res) => {
             [name, region, category, price, JSON.stringify(description), image, year, alcohol]
         );
 
-        res.status(201).json(result.rows[0]);
+        const newWine = { ...result.rows[0], price: parseFloat(result.rows[0].price) };
+        res.status(201).json(newWine);
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Error adding wine' });
@@ -52,7 +57,8 @@ router.put('/:id', authenticateToken, async (req, res) => {
             return res.status(404).json({ message: 'Wine not found' });
         }
 
-        res.json(result.rows[0]);
+        const updatedWine = { ...result.rows[0], price: parseFloat(result.rows[0].price) };
+        res.json(updatedWine);
     } catch (err) {
         console.error(err);
         res.status(500).json({ message: 'Error updating wine' });
