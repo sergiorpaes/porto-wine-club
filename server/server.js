@@ -5,6 +5,7 @@ import dotenv from 'dotenv';
 import authRoutes from './routes/auth.js';
 import wineRoutes from './routes/wines.js';
 import paymentRoutes from './routes/payments.js';
+import settingsRoutes from './routes/settings.js';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 
@@ -31,6 +32,7 @@ app.use('/api/auth/login', loginLimiter); // Apply limiter specially to login
 app.use('/api/auth', authRoutes);
 app.use('/api/wines', wineRoutes);
 app.use('/api/payments', paymentRoutes);
+app.use('/api/settings', settingsRoutes);
 
 // Export app for serverless
 export const handler = app;
