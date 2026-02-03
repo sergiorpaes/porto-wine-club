@@ -4,9 +4,6 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import authRoutes from './routes/auth.js';
 import wineRoutes from './routes/wines.js';
-import fs from 'fs';
-import path from 'path';
-import { fileURLToPath } from 'url';
 import helmet from 'helmet';
 import rateLimit from 'express-rate-limit';
 
@@ -14,7 +11,6 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
 // Security Middleware
 app.use(helmet());
@@ -33,12 +29,6 @@ app.get('/api/health', (req, res) => res.json({ status: 'ok', timestamp: new Dat
 app.use('/api/auth/login', loginLimiter); // Apply limiter specially to login
 app.use('/api/auth', authRoutes);
 app.use('/api/wines', wineRoutes);
-
-// Database Initialization
-const DATA_DIR = path.join(__dirname, 'data');
-if (!fs.existsSync(DATA_DIR)) {
-  fs.mkdirSync(DATA_DIR);
-}
 
 // Export app for serverless
 export const handler = app;
