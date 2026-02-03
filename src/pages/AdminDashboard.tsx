@@ -173,8 +173,47 @@ const AdminDashboard: React.FC = () => {
                                     <input type="number" step="0.01" placeholder="Price" className="w-full p-2 border rounded" value={form.price || ''} onChange={e => setForm({ ...form, price: parseFloat(e.target.value) })} required />
 
                                     <div>
-                                        <label className="block text-sm font-medium mb-1">Image URL</label>
-                                        <input placeholder="https://..." className="w-full p-2 border rounded" value={form.image || ''} onChange={e => setForm({ ...form, image: e.target.value })} required />
+                                        <label className="block text-sm font-medium mb-1">Image (URL or Upload)</label>
+                                        <div className="flex gap-2">
+                                            <input
+                                                placeholder="https://..."
+                                                className="flex-1 p-2 border rounded"
+                                                value={form.image || ''}
+                                                onChange={e => setForm({ ...form, image: e.target.value })}
+                                                required={!form.image}
+                                            />
+                                            <label className="cursor-pointer bg-gray-100 hover:bg-gray-200 border rounded px-3 py-2 flex items-center justify-center">
+                                                <span className="text-sm font-medium text-gray-600">Upload</span>
+                                                <input
+                                                    type="file"
+                                                    className="hidden"
+                                                    accept="image/*"
+                                                    onChange={(e) => {
+                                                        const file = e.target.files?.[0];
+                                                        if (file) {
+                                                            const reader = new FileReader();
+                                                            reader.onloadend = () => {
+                                                                setForm({ ...form, image: reader.result as string });
+                                                            };
+                                                            reader.readAsDataURL(file);
+                                                        }
+                                                    }}
+                                                />
+                                            </label>
+                                        </div>
+                                        {/* Preview */}
+                                        {form.image && (
+                                            <div className="mt-2 text-center">
+                                                <img src={form.image} alt="Preview" className="h-32 mx-auto object-contain border rounded bg-gray-50" />
+                                                <button
+                                                    type="button"
+                                                    onClick={() => setForm({ ...form, image: '' })}
+                                                    className="text-xs text-red-500 hover:underline mt-1"
+                                                >
+                                                    Clear Image
+                                                </button>
+                                            </div>
+                                        )}
                                     </div>
 
                                     <div>
