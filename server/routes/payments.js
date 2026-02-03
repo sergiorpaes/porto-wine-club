@@ -65,4 +65,53 @@ router.post('/create-payment-intent', async (req, res) => {
     }
 });
 
+// 3. Create Checkout Session (Redirect flow)
+router.post('/create-checkout-session', async (req, res) => {
+    try {
+        const { stripe } = await getStripeContext();
+        const { items } = req.body;
+        const DOMAIN = process.env.CLIENT_URL || 'http://localhost:5173';
+
+        const lineItems = items.map(item => ({
+            price_data: {
+                currency: 'eur',
+                product_data: {
+                    name: item.name,
+                    images: [item.image],
+                },
+                unit_amount: Math.round(item.price * 100),
+            },
+            quantity: item.quantity,
+        }));
+
+        // Add shipping if applicable (simple logic for now)
+        // Note: Real implementation might read from shipping options
+        const totalAmount = items.reduce((sum, item) => sum + (item.price * item.quantity), 0);
+        if (totalAmount <= 100) {
+            lineItems.push({
+                price_data: {
+                    currency: 'eur',
+                    product_data: {
+                        name: 'Shipping',
+                    },
+                    unit_amount: 1500, // €15.00
+                },
+                quantity: 1,
+            });
+        }
+
+        const session = await stripe.checkout.sessions.create({
+            line_items: lineItems,
+            mode: 'payment',
+            success_url: `${DOMAIN}/success?session_id={CHECKOUT_SESSION_ID}`,
+            cancel_url: `${DOMAIN}/checkout`,
+        });
+
+        res.json({ url: session.url });
+    } catch (e) {
+        console.error('Stripe Checkout Error:', e);
+        res.status(500).json({ error: e.message });
+    }
+});
+
 export default router;
