@@ -1,0 +1,97 @@
+[
+  {
+    "id": "1",
+    "name": "Douro Reserva Especial",
+    "region": "Douro Valley",
+    "category": "Red",
+    "price": 65.9,
+    "description": {
+      "pt": "Um tinto robusto e elegante com notas de frutas escuras, chocolate e especiarias. Envelhecido por 18 meses em carvalho francês.",
+      "en": "A robust and elegant red with notes of dark berries, chocolate, and spice. Aged for 18 months in French oak.",
+      "es": "Un tinto robusto y elegante con notas de frutos negros, chocolate y especias. Envejecido 18 meses en roble francés.",
+      "fr": "Un rouge robuste et élégant aux notes de fruits noirs, de chocolat et d'épices. Vieilli 18 mois en chêne français.",
+      "de": "Ein robuster und eleganter Rotwein mit Noten von dunklen Beeren, Schokolade und Gewürzen. 18 Monate in französischer Eiche gereift.",
+      "ru": "Насыщенное и элегантное красное с нотами темных ягод, шоколада и специй. Выдержка 18 месяцев во французском дубе.",
+      "nl": "Een robuuste en elegante rode wijn met tonen van donker fruit, chocolade en kruiden. 18 maanden gerijpt op Frans eiken."
+    },
+    "image": "https://www.bodeboca.com/sites/default/files/wines/2025-10/bot-psi-2022-sa.png",
+    "year": 2019,
+    "alcohol": "14.5%"
+  },
+  {
+    "id": "2",
+    "name": "Alvarinho Premium",
+    "region": "Minho",
+    "category": "White",
+    "price": 28.5,
+    "description": {
+      "pt": "Fresco e refrescante com aromas intensos de pêssego, cítricos e frutas tropicais. A alma dos brancos portugueses.",
+      "en": "Crisp and refreshing with intense aromas of peach, citrus, and tropical fruits. The soul of Portuguese whites.",
+      "es": "Fresco y refrescante con intensos aromas a melocotón, cítricos y frutas tropicales. El alma de los blancos portugueses.",
+      "fr": "Vif et rafraîchissant avec des arômes intenses de pêche, d'agrumes et de fruits tropicaux. L'âme des blancs portugais.",
+      "de": "Knackig und erfrischend mit intensiven Aromen von Pfirsich, Zitrusfrüchten und tropischen Früchten. Die Seele der portugiesischen Weißweine.",
+      "ru": "Свежее и освежающее, с интенсивными ароматами персика, цитрусовых и тропических фруктов. Душа португальских белых вин.",
+      "nl": "Fris en verfrissend met intense aroma's van perzik, citrus en tropisch fruit. De ziel van Portugese witte wijnen."
+    },
+    "image": "https://www.bodeboca.com/sites/default/files/wines/2024-09/bot-caminspriorat-2023.png",
+    "year": 2021,
+    "alcohol": "13%"
+  },
+  {
+    "id": "3",
+    "name": "Vinho Verde Seleção",
+    "region": "Monção e Melgaço",
+    "category": "Green",
+    "price": 18,
+    "description": {
+      "pt": "Leve, levemente espumante e incrivelmente fresco. Perfeito para tardes de verão e harmonizações com frutos do mar.",
+      "en": "Light, slightly sparkling, and incredibly fresh. Perfect for summer afternoons and seafood pairings.",
+      "es": "Ligero, ligeramente espumoso e increíblemente fresco. Perfecto para tardes de verano y mariscos.",
+      "fr": "Léger, légèrement pétillant et incroyablement frais. Parfait pour les après-midi d'été et les fruits de mer.",
+      "de": "Leicht, leicht perlend und unglaublich frisch. Perfekt für Sommernachmittage und Meeresfrüchte.",
+      "ru": "Легкое, слегка игристое и невероятно свежее. Идеально для летних вечеров и морепродуктов.",
+      "nl": "Licht, licht mousserend en ongelooflijk fris. Perfect voor zomermiddagen en bij zeevruchten."
+    },
+    "image": "https://www.bodeboca.com/sites/default/files/wines/2025-02/bot-carramimbre-verdejo-2023.png",
+    "year": 2022,
+    "alcohol": "11.5%"
+  },
+  {
+    "id": "5",
+    "name": "Dão Grande Escolha",
+    "region": "Dão",
+    "category": "Red",
+    "price": 38,
+    "description": {
+      "pt": "Taninos sedosos e aromas complexos de agulhas de pinheiro e frutas silvestres. Uma verdadeira expressão do terroir do Dão.",
+      "en": "Silky tannins and complex aromas of pine needles and wild fruits. A true expression of the Dão terroir.",
+      "es": "Taninos sedosos y aromas complejos de agujas de pino y frutos silvestres. Una verdadera expresión del terruño de Dão.",
+      "fr": "Tanins soyeux et arômes complexes d'aiguilles de pin et de fruits sauvages. Une véritable expression du terroir du Dão.",
+      "de": "Seidige Tannine und komplexe Aromen von Kiefernnadeln und Waldfrüchten. Ein wahrer Ausdruck des Dão-Terroirs.",
+      "ru": "Шелковистые танины и сложные ароматы сосновой хвои и диких ягод. Истинное выражение терруара Доу.",
+      "nl": "Zijdezachte tannines en complexe aroma's van dennennaalden en wild fruit. Een ware expressie van het Dão terroir."
+    },
+    "image": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202412/05/05218717502977____1__600x600.jpg",
+    "year": 2018,
+    "alcohol": "13.5%"
+  },
+  {
+    "id": "6",
+    "name": "Lisboa Private Collection",
+    "region": "Lisboa",
+    "category": "White",
+    "price": 32,
+    "description": {
+      "pt": "Branco encorpado com tons minerais e um final longo e cremoso. Perfeito para paladares exigentes.",
+      "en": "Full-bodied white with mineral undertones and a long, creamy finish. Perfect for discerning palates.",
+      "es": "Blanco con cuerpo, matices minerales y un final largo y cremoso. Perfecto para paladares exigentes.",
+      "fr": "Blanc corsé aux nuances minérales et à la finale longue et crémeuse. Parfait pour les palais exigeants.",
+      "de": "Vollmundiger Weißwein mit mineralischen Untertönen und langem, cremigem Abgang. Perfekt für anspruchsvolle Gaumen.",
+      "ru": "Полнотелое белое с минеральными оттенками и долгим сливочным послевкусием. Для взыскательных вкусов.",
+      "nl": "Volle witte wijn met minerale ondertonen en een lange, romige afdronk. Perfect voor fijnproevers."
+    },
+    "image": "https://sgfm.elcorteingles.es/SGFM/dctm/MEDIA03/202104/07/05218720001405____2__1200x1200.jpg",
+    "year": 2020,
+    "alcohol": "13.5%"
+  }
+]
