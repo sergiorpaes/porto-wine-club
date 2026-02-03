@@ -97,7 +97,7 @@ export const Catalog: React.FC<CatalogProps> = ({ wines, onAddToCart }) => {
                 <h3 className="text-2xl font-serif text-dark mb-4 group-hover:text-wine-500 transition-colors">{wine.name}</h3>
                 <p className="text-gray-500 text-sm mb-6 flex-grow leading-relaxed">
                   {/* @ts-ignore - Dynamic description access */}
-                  {wine.description[language] || wine.description['en'] || Object.values(wine.description)[0]}
+                  {wine.description?.[language] || wine.description?.['en'] || (wine.description ? Object.values(wine.description)[0] : 'No description available')}
                 </p>
                 <div className="flex justify-between items-center pt-6 border-t border-gray-100">
                   <div className="flex flex-col">
