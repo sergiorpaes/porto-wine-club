@@ -5,6 +5,7 @@ import { TRANSLATIONS, Language } from './translations';
 import { AuthProvider, useAuth } from './src/context/AuthContext';
 import { CartProvider } from './src/context/CartContext';
 import { AgeVerificationModal } from './components/AgeVerificationModal';
+import { CookieBanner } from './components/CookieBanner';
 
 // Pages
 import Home from './src/pages/Home';
@@ -58,6 +59,7 @@ const App: React.FC = () => {
           </CartProvider>
         </AuthProvider>
         <AgeVerificationModal />
+        <CookieBanner t={t} />
       </LanguageContext.Provider>
     </Router>
   );

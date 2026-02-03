@@ -12,7 +12,8 @@ export const TRANSLATIONS: Record<Language, any> = {
     cart: { title: 'Seu Carrinho', empty: 'Seu carrinho está vazio', continue: 'Continuar Comprando', subtotal: 'Subtotal', shipping: 'Frete (Grátis p/ Membros)', total: 'Total', checkout: 'Finalizar Compra' },
     testimonials: { title: 'O que dizem nossos membros', t1: 'A qualidade dos vinhos supera todas as expectativas. Uma verdadeira experiência portuguesa em cada garrafa.', t1_author: 'Carlos Mendes', t2: 'A entrega foi rápida e a embalagem impecável. Adorei os vinhos verdes.', t2_author: 'Sophie Dubois', t3: 'Tornar-se membro foi uma das melhores decisões. Os vinhos exclusivos são incríveis.', t3_author: 'James Wright' },
     checkout: { title: 'Finalizar Compra', shipping: 'Dados de Envio', firstName: 'Nome', lastName: 'Sobrenome', email: 'Email', address: 'Endereço', city: 'Cidade', zip: 'CEP', country: 'País', payment: 'Pagamento', proceed: 'Ir para Pagamento', return: 'Voltar à Loja', summary: 'Resumo do Pedido' },
-    ageVerification: { title: 'Verificação de Idade', message: 'Você deve ter 18 anos ou mais para entrar.', yes: 'Sim, tenho 18+', no: 'Não, sou menor de 18', fail: 'Você não pode acessar este site.' }
+    ageVerification: { title: 'Verificação de Idade', message: 'Você deve ter 18 anos ou mais para entrar.', yes: 'Sim, tenho 18+', no: 'Não, sou menor de 18', fail: 'Você não pode acessar este site.' },
+    cookieConsent: { message: 'Nós usamos cookies para melhorar sua experiência.', accept: 'Aceitar' }
   },
   en: {
     nav: { home: 'Home', wines: 'Wines', about: 'The Club', benefits: 'Benefits', contact: 'Contact', call: 'CALL NOW' },
@@ -24,7 +25,8 @@ export const TRANSLATIONS: Record<Language, any> = {
     cart: { title: 'Your Cart', empty: 'Your cart is empty', continue: 'Continue Shopping', subtotal: 'Subtotal', shipping: 'Shipping (Free for Members)', total: 'Total', checkout: 'Checkout' },
     testimonials: { title: 'What our members say', t1: 'The quality of the wines exceeds all expectations. A true Portuguese experience in every bottle.', t1_author: 'Carlos Mendes', t2: 'Delivery was fast and packaging impeccable. I loved the green wines.', t2_author: 'Sophie Dubois', t3: 'Becoming a member was one of the best decisions. The exclusive wines are incredible.', t3_author: 'James Wright' },
     checkout: { title: 'Checkout', shipping: 'Shipping Details', firstName: 'First Name', lastName: 'Last Name', email: 'Email', address: 'Address', city: 'City', zip: 'Zip Code', country: 'Country', payment: 'Payment', proceed: 'Proceed to Payment', return: 'Return to Shop', summary: 'Order Summary' },
-    ageVerification: { title: 'Age Verification', message: 'You must be 18 years or older to enter.', yes: 'Yes, I am 18+', no: 'No, I am under 18', fail: 'You cannot enter this site.' }
+    ageVerification: { title: 'Age Verification', message: 'You must be 18 years or older to enter.', yes: 'Yes, I am 18+', no: 'No, I am under 18', fail: 'You cannot enter this site.' },
+    cookieConsent: { message: 'We use cookies to improve your experience.', accept: 'Accept' }
   },
   es: {
     nav: { home: 'Inicio', wines: 'Vinos', about: 'El Club', benefits: 'Beneficios', contact: 'Contacto', call: 'LLAMAR AHORA' },
@@ -36,7 +38,8 @@ export const TRANSLATIONS: Record<Language, any> = {
     cart: { title: 'Su Carrito', empty: 'Su carrito está vacío', continue: 'Continuar Comprando', subtotal: 'Subtotal', shipping: 'Envío (Gratis p/ Miembros)', total: 'Total', checkout: 'Finalizar Compra' },
     testimonials: { title: 'Lo que dicen nuestros miembros', t1: 'La calidad de los vinos supera todas las expectativas. Una verdadera experiencia portuguesa en cada botella.', t1_author: 'Carlos Mendes', t2: 'La entrega fue rápida y el embalaje impecable. Me encantaron los vinos verdes.', t2_author: 'Sophie Dubois', t3: 'Ser miembro ha sido una de las mejores decisiones. Los vinos exclusivos son increíbles.', t3_author: 'James Wright' },
     checkout: { title: 'Finalizar Compra', shipping: 'Datos d eEnvío', firstName: 'Nombre', lastName: 'Apellido', email: 'Email', address: 'Dirección', city: 'Ciudad', zip: 'Código Postal', country: 'País', payment: 'Pago', proceed: 'Proceder al Pago', return: 'Volver a la Tienda', summary: 'Resumen del Pedido' },
-    ageVerification: { title: 'Verificación de Edad', message: 'Debes tener 18 años o más para entrar.', yes: 'Sí, tengo 18+', no: 'No, soy menor de 18', fail: 'No puedes acceder a este sitio.' }
+    ageVerification: { title: 'Verificación de Edad', message: 'Debes tener 18 años o más para entrar.', yes: 'Sí, tengo 18+', no: 'No, soy menor de 18', fail: 'No puedes acceder a este sitio.' },
+    cookieConsent: { message: 'Usamos cookies para mejorar su experiencia.', accept: 'Aceptar' }
   },
   fr: {
     nav: { home: 'Accueil', wines: 'Vins', about: 'Le Club', benefits: 'Avantages', contact: 'Contact', call: 'APPELER' },
@@ -48,7 +51,8 @@ export const TRANSLATIONS: Record<Language, any> = {
     cart: { title: 'Votre Panier', empty: 'Votre panier est vide', continue: 'Continuer les Achats', subtotal: 'Sous-total', shipping: 'Livraison (Gratuite)', total: 'Total', checkout: 'Payer' },
     testimonials: { title: 'Ce que disent nos membres', t1: 'La qualité des vins dépasse toutes les attentes. Une véritable expérience portugaise dans chaque bouteille.', t1_author: 'Carlos Mendes', t2: 'La livraison a été rapide et l’emballage impeccable. J’ai adoré les vins verts.', t2_author: 'Sophie Dubois', t3: 'Devenir membre a été l’une des meilleures décisions. Les vins exclusifs sont incroyables.', t3_author: 'James Wright' },
     checkout: { title: 'Caisse', shipping: 'Détails de Livraison', firstName: 'Prénom', lastName: 'Nom', email: 'Email', address: 'Adresse', city: 'Ville', zip: 'Code Postal', country: 'Pays', payment: 'Paiement', proceed: 'Procéder au Paiement', return: 'Retour à la Boutique', summary: 'Résumé de la Commande' },
-    ageVerification: { title: 'Vérification de l\'âge', message: 'Vous devez avoir 18 ans ou plus pour entrer.', yes: 'Oui, j\'ai 18+', no: 'Non, je suis mineur', fail: 'Vous ne pouvez pas accéder à ce site.' }
+    ageVerification: { title: 'Vérification de l\'âge', message: 'Vous devez avoir 18 ans ou plus pour entrer.', yes: 'Oui, j\'ai 18+', no: 'Non, je suis mineur', fail: 'Vous ne pouvez pas accéder à ce site.' },
+    cookieConsent: { message: 'Nous utilisons des cookies pour améliorer votre expérience.', accept: 'Accepter' }
   },
   de: {
     nav: { home: 'Startseite', wines: 'Weine', about: 'Der Club', benefits: 'Vorteile', contact: 'Kontakt', call: 'JETZT ANRUFEN' },
@@ -60,7 +64,8 @@ export const TRANSLATIONS: Record<Language, any> = {
     cart: { title: 'Warenkorb', empty: 'Warenkorb leer', continue: 'Weiter einkaufen', subtotal: 'Zwischensumme', shipping: 'Versand (Gratis f. Mitglieder)', total: 'Gesamt', checkout: 'Zur Kasse' },
     testimonials: { title: 'Was unsere Mitglieder sagen', t1: 'Die Qualität der Weine übertrifft alle Erwartungen. Ein echtes portugiesisches Erlebnis in jeder Flasche.', t1_author: 'Carlos Mendes', t2: 'Die Lieferung war schnell und die Verpackung tadellos. Ich liebte die grünen Weine.', t2_author: 'Sophie Dubois', t3: 'Mitglied zu werden war eine der besten Entscheidungen. Die exklusiven Weine sind unglaublich.', t3_author: 'James Wright' },
     checkout: { title: 'Kasse', shipping: 'Versanddetails', firstName: 'Vorname', lastName: 'Nachname', email: 'E-Mail', address: 'Adresse', city: 'Stadt', zip: 'PLZ', country: 'Land', payment: 'Zahlung', proceed: 'Zur Zahlung', return: 'Zurück zum Shop', summary: 'Bestellübersicht' },
-    ageVerification: { title: 'Altersprüfung', message: 'Sie müssen 18 Jahre oder älter sein, um einzutreten.', yes: 'Ja, ich bin 18+', no: 'Nein, ich bin unter 18', fail: 'Sie können diese Seite nicht betreten.' }
+    ageVerification: { title: 'Altersprüfung', message: 'Sie müssen 18 Jahre oder älter sein, um einzutreten.', yes: 'Ja, ich bin 18+', no: 'Nein, ich bin unter 18', fail: 'Sie können diese Seite nicht betreten.' },
+    cookieConsent: { message: 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern.', accept: 'Akzeptieren' }
   },
   ru: {
     nav: { home: 'Главная', wines: 'Вина', about: 'Клуб', benefits: 'Привилегии', contact: 'Контакты', call: 'ПОЗВОНИТЬ' },
@@ -72,7 +77,8 @@ export const TRANSLATIONS: Record<Language, any> = {
     cart: { title: 'Корзина', empty: 'Корзина пуста', continue: 'За покупками', subtotal: 'Итого', shipping: 'Доставка (Бесплатно)', total: 'Всего', checkout: 'Оформить' },
     testimonials: { title: 'Отзывы наших членов', t1: 'Качество вин превосходит все ожидания. Настоящий португальский опыт в каждой бутылке.', t1_author: 'Carlos Mendes', t2: 'Доставка была быстрой, а упаковка безупречной. Мне очень понравились зеленые вина.', t2_author: 'Sophie Dubois', t3: 'Стать членом клуба было лучшим решением. Эксклюзивные вина просто невероятны.', t3_author: 'James Wright' },
     checkout: { title: 'Оформление', shipping: 'Детали доставки', firstName: 'Имя', lastName: 'Фамилия', email: 'Email', address: 'Адрес', city: 'Город', zip: 'Индекс', country: 'Страна', payment: 'Оплата', proceed: 'К оплате', return: 'Вернуться в магазин', summary: 'Ваш заказ' },
-    ageVerification: { title: 'Проверка возраста', message: 'Вам должно быть 18 лет или больше.', yes: 'Да, мне 18+', no: 'Нет, мне меньше 18', fail: 'Вы не можете войти на этот сайт.' }
+    ageVerification: { title: 'Проверка возраста', message: 'Вам должно быть 18 лет или больше.', yes: 'Да, мне 18+', no: 'Нет, мне меньше 18', fail: 'Вы не можете войти на этот сайт.' },
+    cookieConsent: { message: 'Мы используем куки для улучшения вашего опыта.', accept: 'Принять' }
   },
   nl: {
     nav: { home: 'Home', wines: 'Wijnen', about: 'De Club', benefits: 'Voordelen', contact: 'Contact', call: 'BEL NU' },
@@ -84,6 +90,7 @@ export const TRANSLATIONS: Record<Language, any> = {
     cart: { title: 'Winkelmand', empty: 'Winkelmand is leeg', continue: 'Verder Winkelen', subtotal: 'Subtotaal', shipping: 'Verzending (Gratis)', total: 'Totaal', checkout: 'Afrekenen' },
     testimonials: { title: 'Wat onze leden zeggen', t1: 'De kwaliteit van de wijnen overtreft alle verwachtingen. Een echte Portugese ervaring in elke fles.', t1_author: 'Carlos Mendes', t2: 'De levering was snel en de verpakking onberispelijk. Ik hield van de groene wijnen.', t2_author: 'Sophie Dubois', t3: 'Lid worden was een van de beste beslissingen. De exclusieve wijnen zijn ongelooflijk.', t3_author: 'James Wright' },
     checkout: { title: 'Afrekenen', shipping: 'Verzendgegevens', firstName: 'Voornaam', lastName: 'Achternaam', email: 'E-mail', address: 'Adres', city: 'Stad', zip: 'Postcode', country: 'Land', payment: 'Betaling', proceed: 'Naar Betaling', return: 'Terug naar Winkel', summary: 'Besteloverzicht' },
-    ageVerification: { title: 'Leeftijdsverificatie', message: 'Je moet 18 jaar of ouder zijn om binnen te komen.', yes: 'Ja, ik ben 18+', no: 'Nee, ik ben jonger dan 18', fail: 'Je hebt geen toegang tot deze site.' }
+    ageVerification: { title: 'Leeftijdsverificatie', message: 'Je moet 18 jaar of ouder zijn om binnen te komen.', yes: 'Ja, ik ben 18+', no: 'Nee, ik ben jonger dan 18', fail: 'Je hebt geen toegang tot deze site.' },
+    cookieConsent: { message: 'We gebruiken cookies om uw ervaring te verbeteren.', accept: 'Accepteren' }
   }
 };
